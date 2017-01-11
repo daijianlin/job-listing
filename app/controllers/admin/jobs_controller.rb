@@ -30,7 +30,7 @@ class Admin::JobsController < ApplicationController
     end
   end
   def destroy
-    @job = JOb.find(params[:id])
+    @job = Job.find(params[:id])
     @job.destory
     redirect_to admin_jobs_path
   end
