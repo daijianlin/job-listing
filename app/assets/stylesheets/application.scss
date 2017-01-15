@@ -19,192 +19,314 @@
 @import "bootstrap";
 @import "font-awesome";
 
+#修改导航栏连接颜色
+.navbar-default .navbar-nav > li > a{
+  color: #0d6ded;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #0d6ded;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0d6ded;
+  //background-color: #0d6ded;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    //background-color: #0d6ded;
+     color: #212121;
+}
+
+
+.btn-danger {
+    color: #fff;//字体颜色
+    background-color: #1696fb;//背景颜色
+    border-color: #0d6ded;//边框颜色
+}
+
+.btn-danger:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+
+.link-list {
+    overflow: hidden;
+    margin-bottom: 1.0625rem;
+}
+
+div {
+  margin: 0px;
+}
+
+.jumbotron {
+  background: url('http://ogk4z553l.bkt.clouddn.com/banner002.jpg') scroll;
+  margin-top: 0px;
+  margin-down: 0px;
+  background-size: cover;
+  min-width: 250px;
+  height: 670px;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
 .jobs-box-title {
   color: #448AFF;
   font-weight: bold;
   text-align: center;
 }
 
-.jobs-part-1 .jobs-block-1 {
-    display: block;
-    width: 960px;
-    height: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    text-align: center;
-    padding-top: 60px;
+.jobs-part-1  {
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 550px;
+  min-width: 960px;
+  background: #ececec;
 }
 
-.jobs-box-1 {
-    display: block;
-    border-style: none;
-    border-radius: 0;
-    z-index: 38;
-    width: 300px;
-    height: 200px;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 40px;
-    float: left;
+.jobs-part-1 .jobs-block-1 {
+  display: block;
+  width: 960px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.jobs-part-2  {
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 550px;
+  min-width: 960px;
+  background: #fff;
 }
 
 .jobs-part-2 .jobs-block-2 {
-    display: block;
-    width: 960px;
-    height: 450px;
-
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    text-align: center;
-    padding-top: 60px;
-}
-.jobs-part-2  {
-    display: block;
-    width: 100%;
-    height: 550px;
-    min-width: 960px;
-    background: #ececec;
+  display: block;
+  width: 960px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
 }
 
+.jobs-part-3  {
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 630px;
+  min-width: 960px;
+  background: #ececec;
+}
+
+.block-submit-last {
+  display: block;
+  background: #1696fb;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  width: 100%;
+  height: 330px;
+  position: relative;
+  text-align: center;
+  padding: 60px;
+  color: white;
+  top: 2px;
+  letter-spacing: 5px;
+}
+
+.jobs-line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  top: 11%;
+  z-index: 53;
+  width: 70px;
+  height: 2px;
+  position: relative;
+  background: #448AFF;
+  border-style: none;
+  border-radius: 0px;
+}
+
+
+.jobs-part-2 .jobs-block-2 {
+  display: block;
+  width: 960px;
+  height: 450px;
+  margin-top: 0px;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
+}
+
+
+
+.jobs-center-block {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+
+
+.jobs-block-3 {
+  display: block;
+  background: rgba(255, 255, 255, 0.9);
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  border-radius: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 600px;
+  position: relative;
+  text-align: center;
+}
+.jobs-image-1 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  left: 32px;
+  top: 41px;
+  z-index: 49;
+  position: absolute;
+}
+
+.jobs-box-1 {
+  display: block;
+  border-style: none;
+  border-radius: 0;
+  z-index: 38;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 40px;
+  float: left;
+}
 
 .jobs-box-2 {
-    display: block;
-    border-style: none;
-    border-radius: 0;
-    z-index: 38;
-    width: 300px;
-    height: 200px;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 40px;
-    float: left;
+  display: block;
+  border-style: none;
+  border-radius: 0;
+  z-index: 38;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 40px;
+  float: left;
 }
 
 
-.lp-center-block {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 600px;
+.jobs-box-3 {
+  display: block;
+  background: white;
+  border-style: none;
+  border-radius: 0;
+
+  top: 20%;
+  z-index: 38;
+  width: 300px;
+  height: 330px;
+  position: relative;
+  margin-left: 20px;
+  float: left;
 }
 
 
-
-.lp-pom-block-12 {
-    display: block;
-    background: rgba(255, 255, 255, 0.9);
-    background-image: url("//talent-rocket.herokuapp.com/assets/lp-des-bg-748db64bc1ca355d9152eeebdd2730a29f29b01d7b6c5ba086c1227671c5bb05.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    border-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    border-radius: 0;
-    width: 100%;
-    min-width: 1200px;
-    height: 600px;
-    position: relative;
-    text-align: center;
-}
-.p-pom-image-76 {
-    display: block;
-    background: rgba(255, 255, 255, 0);
-    left: 32px;
-    top: 41px;
-    z-index: 49;
-    position: absolute;
+.jobs-box-4 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  background-image: url("/images/daijianlin.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  border-style: none;
+  border-radius: 146px;
+  left: 32px;
+  top: 180px;
+  z-index: 47;
+  width: 70px;
+  height: 70px;
+  position: absolute;
 }
 
 
-.lp-pom-block-12-color-overlay {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.9);
-    height: 600px;
-    width: 100%;
-    min-width: 1200px;
+.jobs-text-1 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 81px;
+  width: 235px;
+  height: 78px;
+  position: absolute;
+  text-align: left;
 }
 
-
-
-
-.lp-pom-box-82 {
-    display: block;
-    background: white;
-    border-style: none;
-    border-radius: 0;
-
-    top: 20%;
-    z-index: 38;
-    width: 300px;
-    height: 330px;
-    position: relative;
-    margin-left: 20px;
-    float: left;
-}
-.lp-pom-text-83 {
-    display: block;
-    background: rgba(255, 255, 255, 0);
-    border-style: none;
-    border-radius: 0;
-    left: 32px;
-    top: 81px;
-    width: 235px;
-    height: 78px;
-    position: absolute;
-    text-align: left;
+.jobs-text-2 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 256px;
+  z-index: 46;
+  width: 87px;
+  height: 26px;
+  position: absolute;
+  text-align: left;
 }
 
-.lp-pom-box-77 {
-    display: block;
-    background: rgba(255, 255, 255, 0);
-    background-image: url("/images/daijianlin.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    border-style: none;
-    border-radius: 146px;
-    left: 32px;
-    top: 180px;
-    z-index: 47;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-}
-
-.lp-pom-text-78 {
-    display: block;
-    background: rgba(255, 255, 255, 0);
-    border-style: none;
-    border-radius: 0;
-    left: 32px;
-    top: 256px;
-    z-index: 46;
-    width: 87px;
-    height: 26px;
-    position: absolute;
-    text-align: left;
-}
-
-.lp-pom-text-79 {
-    display: block;
-    background: rgba(255, 255, 255, 0);
-    border-style: none;
-    border-radius: 0;
-    left: 32px;
-    top: 276px;
-    z-index: 45;
-    width: 235px;
-    height: 19px;
-    position: absolute;
-    text-align: left;
+.jobs-text-3 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 276px;
+  z-index: 45;
+  width: 235px;
+  height: 19px;
+  position: absolute;
+  text-align: left;
 }
 
 .navbar-brand,
@@ -221,19 +343,19 @@
 
 
 .round-submit-1 .round-submit-button {
-    border-radius: 25px;
-    background: transparent;
-    display: inline-block;
-    border: 2px solid #fff;
-    color: #fff;
-    line-height: 1;
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 14px 37px 13px;
-    margin-right: 10px;
-    margin-top: 20px;
+  border-radius: 25px;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 37px 13px;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 .custab{
   border: 1px solid #ccc;
@@ -248,16 +370,6 @@
   transition: 0.5s;
 }
 
-.jumbotron {
-  background: url('http://ogk4z553l.bkt.clouddn.com/banner002.jpg') scroll;
-
-  background-size: cover;
-  min-width: 250px;
-  height: 1000px;
-  width: 100%;
-  left: 0;
-  right: 0;
-}
 
 .navbar-default {
   background-color: #fefefe;
@@ -266,12 +378,12 @@
 }
 
 .navbar-brand > img {
-    display: inline-block;	//图片和链接文字显示在同一行
-    margin-top: -10px;
-    margin-right: 10px; //图片和链接文字拉开一点距离
-    //width: 25px; //定制图片宽度
-    height: 35px; //定制图片高度
-    font-family: Verdana, Geneva, sans-serif;
+  display: inline-block;	//图片和链接文字显示在同一行
+  margin-top: -10px;
+  margin-right: 10px; //图片和链接文字拉开一点距离
+  //width: 25px; //定制图片宽度
+  height: 35px; //定制图片高度
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .thumbnail {
@@ -306,20 +418,6 @@
   color: white;
 }
 
-.jobs-line {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    top: 11%;
-    z-index: 53;
-    width: 6%;
-    height: 2px;
-    position: relative;
-    background: #448AFF;
-    border-style: none;
-    border-radius: 0px;
-}
 
 .jobs-sub-content01 {
   display: block;
@@ -338,24 +436,6 @@
   text-align: center;
 }
 
-.block-submit-last {
-  display: block;
-  background: #1696fb;
-  border-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  margin-bottom: 0px;
-  border-radius: 0;
-  width: 100%;
-  height: 330px;
-  position: relative;
-  text-align: center;
-  padding: 60px;
-  color: white;
-  top: 2px;
-  letter-spacing: 5px;
-}
 
 .foot {
     font-family: Verdana, Geneva, sans-serif;
