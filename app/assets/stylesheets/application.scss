@@ -19,7 +19,222 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.jobs-box-title {
+  color: #448AFF;
+  font-weight: bold;
+  text-align: center;
+}
 
+.jobs-part-1 .jobs-block-1 {
+    display: block;
+    width: 960px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.jobs-box-1 {
+    display: block;
+    border-style: none;
+    border-radius: 0;
+    z-index: 38;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 40px;
+    float: left;
+}
+
+.jobs-part-2 .jobs-block-2 {
+    display: block;
+    width: 960px;
+    height: 450px;
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+}
+.jobs-part-2  {
+    display: block;
+    width: 100%;
+    height: 550px;
+    min-width: 960px;
+    background: #ececec;
+}
+
+
+.jobs-box-2 {
+    display: block;
+    border-style: none;
+    border-radius: 0;
+    z-index: 38;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 40px;
+    float: left;
+}
+
+
+.lp-center-block {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+}
+
+
+
+.lp-pom-block-12 {
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    background-image: url("//talent-rocket.herokuapp.com/assets/lp-des-bg-748db64bc1ca355d9152eeebdd2730a29f29b01d7b6c5ba086c1227671c5bb05.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    border-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    border-radius: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 600px;
+    position: relative;
+    text-align: center;
+}
+.p-pom-image-76 {
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    left: 32px;
+    top: 41px;
+    z-index: 49;
+    position: absolute;
+}
+
+
+.lp-pom-block-12-color-overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    height: 600px;
+    width: 100%;
+    min-width: 1200px;
+}
+
+
+
+
+.lp-pom-box-82 {
+    display: block;
+    background: white;
+    border-style: none;
+    border-radius: 0;
+
+    top: 20%;
+    z-index: 38;
+    width: 300px;
+    height: 330px;
+    position: relative;
+    margin-left: 20px;
+    float: left;
+}
+.lp-pom-text-83 {
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    border-style: none;
+    border-radius: 0;
+    left: 32px;
+    top: 81px;
+    width: 235px;
+    height: 78px;
+    position: absolute;
+    text-align: left;
+}
+
+.lp-pom-box-77 {
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    background-image: url("/images/daijianlin.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    border-style: none;
+    border-radius: 146px;
+    left: 32px;
+    top: 180px;
+    z-index: 47;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+.lp-pom-text-78 {
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    border-style: none;
+    border-radius: 0;
+    left: 32px;
+    top: 256px;
+    z-index: 46;
+    width: 87px;
+    height: 26px;
+    position: absolute;
+    text-align: left;
+}
+
+.lp-pom-text-79 {
+    display: block;
+    background: rgba(255, 255, 255, 0);
+    border-style: none;
+    border-radius: 0;
+    left: 32px;
+    top: 276px;
+    z-index: 45;
+    width: 235px;
+    height: 19px;
+    position: absolute;
+    text-align: left;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 40px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+.form-group,
+{
+    padding-top: -20px;
+}
+
+
+.round-submit-1 .round-submit-button {
+    border-radius: 25px;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 37px 13px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
 .custab{
   border: 1px solid #ccc;
   padding: 5px;
@@ -46,10 +261,18 @@
 
 .navbar-default {
   background-color: #fefefe;
-  border: none;
-  border-radius: 0;
+  border-color: #e8e8e8;
+  margin-bottom: 0;
 }
 
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-top: -10px;
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    //width: 25px; //定制图片宽度
+    height: 35px; //定制图片高度
+    font-family: Verdana, Geneva, sans-serif;
+}
 
 .thumbnail {
   border: 0 none;
@@ -69,11 +292,12 @@
 
 .slogan {
   font-family: PingFangSC-Regular, Arial, Helvetica, sans-serif;
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 50px;
   text-align: center;
   color: white;
   top: 2px;
+  letter-spacing: 5px;
 }
 
 .lead {
@@ -81,26 +305,12 @@
   text-align: center;
   color: white;
 }
-.block-submit-last {
-    display: block;
-    background: #3d3d3d;
-    border-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 0px;
-    border-radius: 0;
-    width: 100%;
-    height: 250px;
-    position: relative;
-    text-align: center;
-    padding: 60px;
-}
 
 .jobs-line {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 60px;
     top: 11%;
     z-index: 53;
     width: 6%;
@@ -120,12 +330,31 @@
   width: auto;
   height: auto;
   position: relative;
+
 }
 #jobs-sub-content-id01 {
   color: #448AFF;
-  font-size: 24px;
   font-weight: bold;
   text-align: center;
+}
+
+.block-submit-last {
+  display: block;
+  background: #1696fb;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  width: 100%;
+  height: 330px;
+  position: relative;
+  text-align: center;
+  padding: 60px;
+  color: white;
+  top: 2px;
+  letter-spacing: 5px;
 }
 
 .foot {
@@ -133,6 +362,6 @@
     background-color: #202120;
     text-align: center;
     color: #7e7e7e;
-    line-height: 40px;
-    height: 40px;
+    line-height: 60px;
+    height: 60px;
 }
