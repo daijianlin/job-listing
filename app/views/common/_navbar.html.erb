@@ -2,11 +2,37 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"> 18k offer </a>
+            <a class="navbar-brand" href="/">
+            <img src="http://ogk4z553l.bkt.clouddn.com/Jobs-logo-02.png?imageView/2/w/120" alt="bid" class = "img-thhumbnail">
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a href="#">添加简历 </a></li>
+          <li><a href="#">浏览职位</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="请输入职位信息">
+            </div>
+            <button type="submit" class="btn btn-success">搜索职位</button>
+          </form>
+
             <ul class="nav navbar-nav navbar-right">
               <% if !current_user %>
                 <li><%= link_to("注册", new_user_registration_path) %> </li>
@@ -14,7 +40,7 @@
               <% else %>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      Hi!, <%= current_user.email %>
+                      当前用户：<%= current_user.email %>
                       <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
