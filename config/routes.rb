@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   resources :jobs do
     resources :resumes
@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
 end
