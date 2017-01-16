@@ -19,6 +19,90 @@
 @import "bootstrap";
 @import "font-awesome";
 
+/*
+.nav-pills {
+    color: #fff;//字体颜色
+    background-color: #EF6C00;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.nav-pills:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+*/
+
+.nav-pills > li.active > a {
+    background-color:#0090ff;
+}
+// This changes the color of the active
+
+.nav-pills>li.active>a:hover {
+    background-color:#1857f4;
+}
+// This changes the color of the hovered pill
+
+.btn-xs {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    color: #fff;//字体颜色
+    background-color: #EF6C00;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.btn-primary:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+
+.btn-danger {
+    color: #fff;//字体颜色
+    background-color: #EF6C00;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.btn-danger:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+
+.btn-success {
+    color: #fff;//字体颜色
+    background-color: #EF6C00;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.btn-success:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+
+.btn-warning {
+    color: #fff;//字体颜色
+    background-color: #EF6C00;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.btn-warning:hover {
+    background-color: #E65100;//鼠标放置在btn上的背景颜色
+    border-color: #E65100;//鼠标放置在btn上的边框颜色
+}
+
+a:link {color:#333333;}    /* 未被访问的链接 */
+a:visited {color:#333333;} /* 已被访问的链接 */
+a:hover {color:#1696fb;}   /* 鼠标指针移动到链接上 */
+a:active {color:#1696fb;}  /* 正在被点击的链接 */
+
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+
+
+
+
 #修改导航栏连接颜色
 .navbar-default .navbar-nav > li > a{
   color: #0d6ded;
@@ -46,8 +130,8 @@
 
 .btn-danger {
     color: #fff;//字体颜色
-    background-color: #1696fb;//背景颜色
-    border-color: #0d6ded;//边框颜色
+    background-color: #E65100;//背景颜色
+    border-color: #E65100;//边框颜色
 }
 
 .btn-danger:hover {
@@ -74,6 +158,10 @@ div {
   width: 100%;
   left: 0;
   right: 0;
+}
+
+.container-fluid .jumbotron{
+  border-radius: 0;//圆角为0
 }
 
 .jobs-box-title {
@@ -361,6 +449,7 @@ div {
   border: 1px solid #ccc;
   padding: 5px;
   margin: 5% 0;
+
   box-shadow: 3px 3px 2px #ccc;
   transition: 0.5s;
 }
@@ -370,6 +459,14 @@ div {
   transition: 0.5s;
 }
 
+.custab-main{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
 
 .navbar-default {
   background-color: #fefefe;
@@ -395,6 +492,7 @@ div {
 .title {
   font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
   text-align: center;
+  border-radius: 0;//圆角为0没作用？
   margin-top: 150px;
   margin-bottom: 10px;
   color: white;
