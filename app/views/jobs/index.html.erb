@@ -1,4 +1,4 @@
-<div class="pull-right">
+<div class="pull-right" id="include-job">
   <br>
   <%= link_to("增添工作岗位", new_job_path, :class => "btn btn-default" ) %>
 </div>
@@ -22,7 +22,8 @@
         </li>
     </ul>
 </div>
-<table class="table table-boldered table-hover table-striped custab-main">
+<div id="job-table">
+<table class="table table-boldered table-hover table-striped custab-main" >
     <thead>
         <tr>
             <td>
@@ -53,3 +54,4 @@
     </tbody>
 
 </table>
+</div>
