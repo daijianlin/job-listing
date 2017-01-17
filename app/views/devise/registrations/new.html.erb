@@ -1,17 +1,65 @@
-<h2>Sign up2</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<%#= render "devise/shared/links" %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+<div class="container page-wrap ">
+  <div class="devise-view">
+    <img src="http://ogk4z553l.bkt.clouddn.com/banner002.jpg" alt="background image">
+    <div class="devise-sign-up">
+      <div class="left">
+        <h1>FutureCareer</h1>
+        <div class="description">
+          <h2>建立连接，共赢未来</h2>
+          <p>企业与人才，能找到彼此匹配的对方</p>
+          <h2>我们的优势</h2>
+          <p>企专业化团队经验，职位面对全球，集中软件相关行业</p>
+        </div>
+      </div>
+    <div class="right">
+      <div class="input-block">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true, label: "电子邮箱", placeholder: "请输入电子邮箱", type: "email", value: "", name: "user[email]", id: "user_email", input_html: { class: "string email required form-control" } %>
+            <%= f.input :password, required: true, label: "密码", placeholder: "密码至少6位", type: "password", name: "user[password]", id: "user_password", input_html: { class: "form-group password required user_password"} %>
+            <%= f.input :password_confirmation, required: true, label: "密码确认", placeholder: "再输入一遍确认密码", type: "password", name: "user[password_confirmation]", id: "user_password_confirmation", input_html: { class: "form-group password required user_password_confirmation"} %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, :label => "注 册", type: "submit", name: "commit", value: "注 册", input_html: {  class: "btn btn-default btn btn-devise btn-block"}%>
+          </div>
+
+        <% end %>
+        <br />
+        已经有账号？  <a href="/users/sign_in">登录</a>
+        <br />
+
+        <!-- <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post">
+          <input name="utf8" type="hidden" value="&#x2713;" />
+          <input type="hidden" name="authenticity_token" value="Hk7PxtOB2lKCzJxmttOa1vOIAGu10cLMj/9eNFJUrSECDDmq5YvJthes7NU3sEf9DkZCyeedtXvppotMhV8mnQ==" />
+           <div>
+             <div class="form-group email required user_email">
+               <input class="string email required form-control" autofocus="autofocus" placeholder="电子邮箱" type="email" value="" name="user[email]" id="user_email" />
+             </div>
+           </div>
+           <div>
+             <div class="form-group password required user_password">
+               <input class="password required form-control" placeholder="密码,至少8位英文数字组合" type="password" name="user[password]" id="user_password" />
+             </div>
+           </div>
+           <div>
+             <div class="form-group password required user_password_confirmation">
+               <input class="password required form-control" placeholder="确认密码" type="password" name="user[password_confirmation]" id="user_password_confirmation" /></div>
+           </div>
+           <div>
+             <input type="submit" name="commit" value="注 册" class="btn btn-default btn btn-devise btn-block" data-disable-with="注 册" />
+           </div>
+          </form>
+          <br />
+          已经有账号？  <a href="/users/sign_in">登录</a>
+          <br /> -->
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
