@@ -493,6 +493,16 @@ body {
   transition: 0.5s;
 }
 
+.job-name {
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  color: #0d6ded;
+  font-size: 18px;
+}
+.wage-range {
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  color: #0d6ded;
+  font-size: 14px;
+}
 
 
 
@@ -556,7 +566,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 
 .nav-pills > li.active > a {
-    background-color:#0090ff;
+    background-color:#fff;
+    color: #0d6ded;
 }
 // This changes the color of the active
 
@@ -582,9 +593,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .btn-primary {
-    color: #FFFFFF;//字体颜色
-    background-color: #FF8A65;//背景颜色
-    border-color: #FF8A65;//边框颜色
+    color: #0d6ded;//字体颜色
+    background-color: transparent;//背景颜色
+    border-color: #0d6ded;//边框颜色
 }
 .btn-primary:hover {
     background-color: #2962FF;//鼠标放置在btn上的背景颜色
@@ -592,8 +603,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .btn-info {
-    color: #fff;//字体颜色
-    background-color: #E57373;//背景颜色
+    color: #E57373;//字体颜色
+    background-color: transparent;//背景颜色
     border-color: #E57373;//边框颜色
 }
 .btn-info:hover {
@@ -602,8 +613,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .btn-success {
-    color: #fff;//字体颜色
-    background-color: #2E7D32;//背景颜色
+    color: #2E7D32;//字体颜色
+    background-color: transparent;//背景颜色
     border-color: #2E7D32;//边框颜色
 }
 .btn-success:hover {
@@ -612,8 +623,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .btn-warning {
-    color: #fff;//字体颜色
-    background-color: #9E9E9E;//背景颜色
+    color: #9E9E9E;//字体颜色
+    background-color: transparent;//背景颜色
     border-color: #9E9E9E;//边框颜色
 }
 .btn-warning:hover {
@@ -621,10 +632,10 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     border-color: #2962FF;//鼠标放置在btn上的边框颜色
 }
 
-a:link {color:#333333;}    /* 未被访问的链接 */
-a:visited {color:#333333;} /* 已被访问的链接 */
-a:hover {color:#1696fb;}   /* 鼠标指针移动到链接上 */
-a:active {color:#1696fb;}  /* 正在被点击的链接 */
+// a:link {color:#333333;}    /* 未被访问的链接 */
+// a:visited {color:#333333;} /* 已被访问的链接 */
+// a:hover {color:#1696fb;}   /* 鼠标指针移动到链接上 */
+// a:active {color:#1696fb;}  /* 正在被点击的链接 */
 
 
 
@@ -747,9 +758,14 @@ div {
   color: white;
 }
 
-
+.jobs-show0 {
+    border-bottom: 1px dotted #CCC;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
 
 .jobs-show {
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px dotted #CCC;
     padding: 15px;
 }

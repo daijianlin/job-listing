@@ -34,6 +34,7 @@ gem "devise"
 gem "simple_form"
 gem 'font-awesome-rails'
 gem 'carrierwave'
+gem "will_paginate"
 
 
 group :development, :test do

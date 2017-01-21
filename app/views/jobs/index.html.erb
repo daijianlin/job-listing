@@ -8,54 +8,56 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
           <li>
-            <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+            <%= link_to("薪资下限", jobs_path(:order => "by_lower_bound")) %>
           </li>
           <li>
-              <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+              <%= link_to("薪资上限", jobs_path(:order => "by_upper_bound")) %>
 
           </li>
           <li>
-            <%= link_to("按照发表时间排序", jobs_path ) %>
+            <%= link_to("发表时间", jobs_path ) %>
 
           </li>
       </ul>
   </div>
-  <br>
-  <br>
-  <br>
+
+  <div class="row jobs-show0">
+  </div>
   <div class="job-table">
-   <% @jobs.each do |job| %>
+    <% @jobs.each do |job| %>
     <div class="row jobs-show">
-      <div class="col-md-12 col-lg-10 col-lg-offset-1">
+
+      <div class="col-md-12 col-lg-9 col-lg-offset-1">
+
         <div class="pull-right">
-        发布时间： <%= job.created_at.to_date %>
+        发布时间：<%= job.created_at.to_date %>
         </div>
-        <p>职位名称：<%= link_to(job.title, job_path(job)) %></p>
-
-
+        <p ><%= link_to(job.title, job_path(job), class: 'job-name') %></p>
         <div class="row">
-          <div class="col-md-12">
-            <p>工资范围：<%= job.wage_lower_bound %> - <%= job.wage_upper_bound %> </p>
+          <div class="col-md-9">
+            <p class="wage-range"><%= job.wage_lower_bound %> - <%= job.wage_upper_bound %> </p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <p>职位描述：<%= job.description %> </p>
+          <div class="col-md-9">
+            <p><%= job.description %> </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p>联系邮箱：<%= job.contact_email %> </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p><%= link_to("快速应聘", job_path(job))%> </p>
+        <div class="pull-right">
+          <div class="pull-right col-md-12">
+            <p><%= link_to("快速应聘", job_path(job), :class => "btn btn-xs btn-primary")%> </p>
           </div>
         </div>
 
       </div>
     </div>
     <% end %>
+  </div>
+
+
+
+
+  <div class="text-center">
+    <%= will_paginate @jobs %>
   </div>
 </div>
