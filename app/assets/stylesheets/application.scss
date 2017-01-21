@@ -31,80 +31,521 @@
 }
 */
 
-.devise-view img {
-    background-color: #323232;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+/* navbar section
+导航栏css设置
+*/
+
+//修改导航栏背景，边框颜色
+
+
+.navbar-default {
+  background-color: #fefefe;//接近白色
+  border-color: #e8e8e8;//边框颜色
+  margin-bottom: 0px;
+  //margin-bottom: 60px;//本来position:fixed需要这样，用了navbar-fixed-top就不用了。
+  //position: fixed; 本来想用这个，后面在navbar中用navbar-fixted-top解决了。方向很重要
+  z-index: 10000;//让经过的文字图片不浮动在上面，z-index用来设置元素的堆叠顺序
+  width: 100%;
+
+}
+
+//修改导航栏链接的颜色
+.navbar-default .navbar-nav > li > a{
+  color: #000;
+}
+
+//修改导航栏鼠标经过和点击时候的颜色
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #0d6ded;
+  background-color: transparent;
+}
+//修改导航栏激活时候的颜色？
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0d6ded;
+  //background-color: #0d6ded;
+}
+
+// 这是干什么？
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    //background-color: #0d6ded;
+  color: #212121;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 40px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+
+.navbar-brand > img {
+  display: inline-block;	//图片和链接文字显示在同一行
+  margin-top: -10px;
+  margin-right: 10px; //图片和链接文字拉开一点距离
+  //width: 25px; //定制图片宽度
+  height: 35px; //定制图片高度
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+
+
+/*
+页脚
+*/
+
+.foot {
+    font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    background-color: #202120;
+    text-align: center;
+    color: #7e7e7e;
+    line-height: 60px;
+    height: 60px;
+    margin-top: 0px;
+    //position: fixed;
     bottom: 0;
-    margin: auto;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -5;
-}
-.devise-view a:link {
-    color: #fff;
+    width: 100%;
+    padding-bottom: 42px;
+    z-index: 1000;
+
 }
 
-.page-wrap {
-    min-height: 100%;
-    min-width: 100%;
-    margin-bottom: -60px;
-}
-.devise-view {
-    margin-bottom: -10px;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -999;
-}
-.devise-view .devise-sign-up {
-    margin: 80px auto;
-    color: #ffffff;
-    width: 900px;
-    height: 500px;
-}
-.devise-view .devise-sign-up .left {
-    padding: 0 20px 20px;
-    width: 580px;
-    height: 500px;
-    float: left;
+// 去掉最下面的那个滚圈。
+body {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-.devise-view .devise-sign-up .right {
-    padding: 20px 20px 0;
-    margin: auto;
-    width: 320px;
-    height: 500px;
-    float: left;
-    color: #fff;
+/* welcome index section
+
+*/
+
+//定义首页图片背景大小等
+.jumbotron {
+
+  background: url('http://ogk4z553l.bkt.clouddn.com/banner002.jpg') scroll ; //图片随文字动
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-size: cover;
+  min-width: 250px;//定义了浏览器显示的最小宽度，250大概是iPhone6s的屏幕宽度，适配手机
+  height: 670px;
+  width: 100%;
+  //left: 0;单单left和right 是没有意义的，要和position: absolute及position: relative一起使用
+  //right: 0;
 }
 
-h1, .h1 {
-    font-size: 36px;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.container-fluid .jumbotron{
+  border-radius: 0;//圆角为0
 }
 
-form {
-    display: block;
-    margin-top: 0em;
+.title {
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-radius: 0;//圆角为0没作用？
+  margin-top: 150px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 44px;
+  line-height: 56px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.slogan {
+  font-family: PingFangSC-Regular, Arial, Helvetica, sans-serif;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+  top: 2px;
+  letter-spacing: 5px;
 }
 
-.devise-view .btn-devise, .devise-view .btn-devise.active, .devise-view .btn-devise.active, .devise-view .btn-devise.active.focus, .devise-view .btn-devise.active:focus, .devise-view .btn-devise.active:hover, .devise-view .btn-devise.focus, .devise-view .btn-devise:active, .devise-view .btn-devise:active, .devise-view .btn-devise:active.focus, .devise-view .btn-devise:active:focus, .devise-view .btn-devise:active:hover, .devise-view .btn-devise:focus, .devise-view .btn-devise:hover, .devise-view .open>.dropdown-toggle.btn-devise, .devise-view .open>.dropdown-toggle.btn-devise, .devise-view .open>.dropdown-toggle.btn-devise.focus, .devise-view .open>.dropdown-toggle.btn-devise:focus, .devise-view .open>.dropdown-toggle.btn-devise:hover {
-    background-color: #43cb83;
-    border-color: #43cb83;
-    color: #fff;
+
+/** 接下来三部分
+第一部分是优势
+第二部分是工作搜索
+第三部分是老总评价
+
+**/
+
+//共同部分，短线
+.welcome-short-line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  top: 11%;
+  z-index: 53;
+  width: 70px;
+  height: 2px;
+  position: relative;
+  background: #448AFF;
+  border-style: none;
+  border-radius: 0px;
+}
+
+/* 第一部分
+
+*/
+.welcome-part1-01  {
+  //display: block;没有作用
+  margin-top: -60px;//
+  margin-bottom: 0px;
+  width: 100%;
+  height: 550px;
+  min-width: 250px;
+  background: #ececec;
+}
+
+//定义了划分三块
+.welcome-part1-01 .welcome-part1-block {
+  display: block;
+  width: 960px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.welcome-part1-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 12%;
+  z-index: 52;
+  width: auto;
+  height: auto;
+  position: relative;
+  color: #448AFF;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+//定义了划分三块中的一块
+.welcome-part1-01-box {
+  display: block;
+  border-style: none;
+  border-radius: 0;
+  z-index: 38;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 40px;
+  float: left;
+}
+
+.welcome-part1-01-title {
+  color: #448AFF;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+//定义了划分三块中的第二块
+.welcome-part2  {
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 550px;
+  min-width: 960px;
+  background: #fff;
+}
+
+
+
+.welcome-part2 .welcome-part2-block {
+  display: block;
+  width: 960px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+  padding-top: 60px;
+}
+
+
+
+.welcome-part2-box {
+  display: block;
+  border-style: none;
+  border-radius: 0;
+  z-index: 38;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 40px;
+  float: left;
+}
+
+
+//定义了划分三块中的第三块
+
+.welcome-part3  {
+  display: block;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 630px;
+  min-width: 960px;
+  background: #ececec;
+}
+
+.welcome-part3-box {
+  display: block;
+  background: white;
+  border-style: none;
+  border-radius: 0;
+
+  top: 20%;
+  z-index: 38;
+  width: 300px;
+  height: 330px;
+  position: relative;
+  margin-left: 20px;
+  float: left;
+}
+
+
+.welcome-part3-text1 {
+  display: block;
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 81px;
+  width: 235px;
+  height: 78px;
+  position: absolute;
+  text-align: left;
+}
+
+
+.welcome-quote-image {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  left: 32px;
+  top: 41px;
+  z-index: 49;
+  position: absolute;
+}
+
+.welcome-part3-box-image {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  background-image: url("/images/daijianlin.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  border-style: none;
+  border-radius: 146px;
+  left: 32px;
+  top: 180px;
+  z-index: 47;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+
+
+.welcome-part3-text2 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 256px;
+  z-index: 46;
+  width: 87px;
+  height: 26px;
+  position: absolute;
+  text-align: left;
+}
+
+
+.welcome-part3-text3 {
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  border-style: none;
+  border-radius: 0;
+  left: 32px;
+  top: 276px;
+  z-index: 45;
+  width: 235px;
+  height: 19px;
+  position: absolute;
+  text-align: left;
+}
+
+.welcome-part3-center-block {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+
+.user-name{
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
+.user-introduction{
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
+
+/*
+  赶快来应聘section
+*/
+
+.block-submit-last {
+  display: block;
+  background: #1696fb;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  width: 100%;
+  height: 410px;
+  position: relative;
+  text-align: center;
+  padding: 60px;
+  color: white;
+  top: 2px;
+  letter-spacing: 5px;
+}
+
+//圆按键
+.round-submit-1 .round-submit-button {
+  border-radius: 25px;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 37px 13px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+/*
+  Jobs index页面
+*/
+
+.job-index {
+  background: #fff;
+  margin-top: 0px;
+  margin-down: 0px;
+  background-size: cover;
+  min-width: 250px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+#include-job {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+
+.job-table {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.custab-main{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+
+
+
+/*
+ Job new
+
+*/
+.top54{
+  margin-top: 54px;
+}
+
+#include-job2 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+/*
+ Job show
+
+*/
+.leftright30{
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+
+
+
+/*
+jobs admin
+
+*/
+
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+
+.form-group,
+{
+    padding-top: -20px;
 }
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
@@ -112,29 +553,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     cursor: pointer;
 }
 
-.top54{
-  margin-top: 54px;
-}
 
-.leftright30{
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-#include-job {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-#include-job2 {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-#job-table {
-  margin-left: 15px;
-  margin-right: 15px;
-}
 
 .nav-pills > li.active > a {
     background-color:#0090ff;
@@ -208,39 +627,100 @@ a:hover {color:#1696fb;}   /* 鼠标指针移动到链接上 */
 a:active {color:#1696fb;}  /* 正在被点击的链接 */
 
 
+
+
+
+
+
+/*
+登录和注册
+*/
+
+.devise-view img {
+    background-color: #323232;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -5;
+}
+.devise-view a:link {
+    color: #fff;
+}
+
+.page-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    margin-bottom: -60px;
+}
+.devise-view {
+    margin-bottom: -10px;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -999;
+}
+.devise-view .devise-sign-up {
+    margin: 80px auto;
+    color: #ffffff;
+    width: 900px;
+    height: 500px;
+}
+.devise-view .devise-sign-up .left {
+    padding: 0 20px 20px;
+    width: 580px;
+    height: 500px;
+    float: left;
+}
+
+.devise-view .devise-sign-up .right {
+    padding: 20px 20px 0;
+    margin: auto;
+    width: 320px;
+    height: 500px;
+    float: left;
+    color: #fff;
+}
+
+
+
+h1, .h1 {
+    font-size: 36px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.devise-view .btn-devise, .devise-view .btn-devise.active, .devise-view .btn-devise.active, .devise-view .btn-devise.active.focus, .devise-view .btn-devise.active:focus, .devise-view .btn-devise.active:hover, .devise-view .btn-devise.focus, .devise-view .btn-devise:active, .devise-view .btn-devise:active, .devise-view .btn-devise:active.focus, .devise-view .btn-devise:active:focus, .devise-view .btn-devise:active:hover, .devise-view .btn-devise:focus, .devise-view .btn-devise:hover, .devise-view .open>.dropdown-toggle.btn-devise, .devise-view .open>.dropdown-toggle.btn-devise, .devise-view .open>.dropdown-toggle.btn-devise.focus, .devise-view .open>.dropdown-toggle.btn-devise:focus, .devise-view .open>.dropdown-toggle.btn-devise:hover {
+    background-color: #43cb83;
+    border-color: #43cb83;
+    color: #fff;
+}
+
+
 @media (min-width: 768px) {
     .navbar {
         border-radius: 0;//圆角为0
     }
 }
-
-
-
-
-#修改导航栏连接颜色
-.navbar-default .navbar-nav > li > a{
-  color: #0d6ded;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #0d6ded;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #0d6ded;
-  //background-color: #0d6ded;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:focus,
-.navbar-default .navbar-nav > .open > a:hover {
-    //background-color: #0d6ded;
-     color: #212121;
-}
-
 
 
 .link-list {
@@ -252,348 +732,7 @@ div {
   margin: 0px;
 }
 
-.jumbotron {
-  background: url('http://ogk4z553l.bkt.clouddn.com/banner002.jpg') scroll;
-  margin-top: 0px;
-  margin-down: 0px;
-  background-size: cover;
-  min-width: 250px;
-  height: 670px;
-  width: 100%;
-  left: 0;
-  right: 0;
-}
 
-.container-fluid .jumbotron{
-  border-radius: 0;//圆角为0
-}
-
-.jobs-box-title {
-  color: #448AFF;
-  font-weight: bold;
-  text-align: center;
-}
-
-.jobs-part-1  {
-  display: block;
-  margin-top: -60px;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 550px;
-  min-width: 960px;
-  background: #ececec;
-}
-
-.jobs-part-1 .jobs-block-1 {
-  display: block;
-  width: 960px;
-  height: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  position: relative;
-  text-align: center;
-  padding-top: 60px;
-}
-
-.jobs-part-2  {
-  display: block;
-  margin-top: -60px;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 550px;
-  min-width: 960px;
-  background: #fff;
-}
-
-.jobs-part-2 .jobs-block-2 {
-  display: block;
-  width: 960px;
-  height: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  position: relative;
-  text-align: center;
-  padding-top: 60px;
-}
-
-.jobs-part-3  {
-  display: block;
-  margin-top: -60px;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 630px;
-  min-width: 960px;
-  background: #ececec;
-}
-
-.block-submit-last {
-  display: block;
-  background: #1696fb;
-  border-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -5px;
-  margin-bottom: 0px;
-  border-radius: 0;
-  width: 100%;
-  height: 410px;
-  position: relative;
-  text-align: center;
-  padding: 60px;
-  color: white;
-  top: 2px;
-  letter-spacing: 5px;
-}
-
-.jobs-line {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-  top: 11%;
-  z-index: 53;
-  width: 70px;
-  height: 2px;
-  position: relative;
-  background: #448AFF;
-  border-style: none;
-  border-radius: 0px;
-}
-
-
-.jobs-part-2 .jobs-block-2 {
-  display: block;
-  width: 960px;
-  height: 450px;
-  margin-top: 0px;
-
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  text-align: center;
-  padding-top: 60px;
-}
-
-
-
-.jobs-center-block {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-}
-
-
-
-.jobs-block-3 {
-  display: block;
-  background: rgba(255, 255, 255, 0.9);
-  background-repeat: no-repeat;
-  background-position: center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  border-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  border-radius: 0;
-  width: 100%;
-  min-width: 1200px;
-  height: 600px;
-  position: relative;
-  text-align: center;
-}
-.jobs-image-1 {
-  display: block;
-  background: rgba(255, 255, 255, 0);
-  left: 32px;
-  top: 41px;
-  z-index: 49;
-  position: absolute;
-}
-
-.jobs-box-1 {
-  display: block;
-  border-style: none;
-  border-radius: 0;
-  z-index: 38;
-  width: 300px;
-  height: 200px;
-  position: relative;
-  margin-left: 20px;
-  margin-top: 40px;
-  float: left;
-}
-
-.jobs-box-2 {
-  display: block;
-  border-style: none;
-  border-radius: 0;
-  z-index: 38;
-  width: 300px;
-  height: 200px;
-  position: relative;
-  margin-left: 20px;
-  margin-top: 40px;
-  float: left;
-}
-
-
-.jobs-box-3 {
-  display: block;
-  background: white;
-  border-style: none;
-  border-radius: 0;
-
-  top: 20%;
-  z-index: 38;
-  width: 300px;
-  height: 330px;
-  position: relative;
-  margin-left: 20px;
-  float: left;
-}
-
-
-.jobs-box-4 {
-  display: block;
-  background: rgba(255, 255, 255, 0);
-  background-image: url("/images/daijianlin.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  border-style: none;
-  border-radius: 146px;
-  left: 32px;
-  top: 180px;
-  z-index: 47;
-  width: 70px;
-  height: 70px;
-  position: absolute;
-}
-
-
-.jobs-text-1 {
-  display: block;
-  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
-  background: rgba(255, 255, 255, 0);
-  border-style: none;
-  border-radius: 0;
-  left: 32px;
-  top: 81px;
-  width: 235px;
-  height: 78px;
-  position: absolute;
-  text-align: left;
-}
-
-.user-introduction{
-  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
-}
-.user-name{
-  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
-}
-
-.jobs-text-2 {
-  display: block;
-  background: rgba(255, 255, 255, 0);
-  border-style: none;
-  border-radius: 0;
-  left: 32px;
-  top: 256px;
-  z-index: 46;
-  width: 87px;
-  height: 26px;
-  position: absolute;
-  text-align: left;
-}
-
-.jobs-text-3 {
-  display: block;
-  background: rgba(255, 255, 255, 0);
-  border-style: none;
-  border-radius: 0;
-  left: 32px;
-  top: 276px;
-  z-index: 45;
-  width: 235px;
-  height: 19px;
-  position: absolute;
-  text-align: left;
-}
-
-.navbar-brand,
-.navbar-nav li a {
-    line-height: 40px;
-    height: 40px;
-    padding-top: 5px;
-}
-
-.form-group,
-{
-    padding-top: -20px;
-}
-
-
-.round-submit-1 .round-submit-button {
-  border-radius: 25px;
-  background: transparent;
-  display: inline-block;
-  border: 2px solid #fff;
-  color: #fff;
-  line-height: 1;
-  text-align: center;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 14px 37px 13px;
-  margin-right: 10px;
-  margin-top: 20px;
-}
-.custab{
-  border: 1px solid #ccc;
-  padding: 5px;
-  margin: 5% 0;
-
-  box-shadow: 3px 3px 2px #ccc;
-  transition: 0.5s;
-}
-
-.custab:hover{
-  box-shadow: 3px 3px 0px transparent;
-  transition: 0.5s;
-}
-
-.custab-main{
-  border: 1px solid #ccc;
-  padding: 5px;
-  margin: 5% 0;
-
-  box-shadow: 3px 3px 2px #ccc;
-  transition: 0.5s;
-}
-
-.navbar-default {
-  background-color: #fefefe;
-  border-color: #e8e8e8;
-  margin-bottom: 0;
-}
-
-.navbar-brand > img {
-  display: inline-block;	//图片和链接文字显示在同一行
-  margin-top: -10px;
-  margin-right: 10px; //图片和链接文字拉开一点距离
-  //width: 25px; //定制图片宽度
-  height: 35px; //定制图片高度
-  font-family: Verdana, Geneva, sans-serif;
-}
 
 .thumbnail {
   border: 0 none;
@@ -601,26 +740,6 @@ div {
   margin-top: 60px;
 }
 
-.title {
-  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
-  text-align: center;
-  border-radius: 0;//圆角为0没作用？
-  margin-top: 150px;
-  margin-bottom: 10px;
-  color: white;
-  font-size: 44px;
-  line-height: 56px;
-}
-
-.slogan {
-  font-family: PingFangSC-Regular, Arial, Helvetica, sans-serif;
-  margin-top: 80px;
-  margin-bottom: 50px;
-  text-align: center;
-  color: white;
-  top: 2px;
-  letter-spacing: 5px;
-}
 
 .lead {
   margin-bottom: 60px;
@@ -629,36 +748,8 @@ div {
 }
 
 
-.jobs-sub-content01 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 12%;
-  z-index: 52;
-  width: auto;
-  height: auto;
-  position: relative;
 
-}
-#jobs-sub-content-id01 {
-  color: #448AFF;
-  font-weight: bold;
-  text-align: center;
-}
-
-
-.foot {
-    font-family: Verdana, Geneva, sans-serif;
-    background-color: #202120;
-    text-align: center;
-    color: #7e7e7e;
-    line-height: 60px;
-    height: 60px;
-    margin-top: 50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 42px;
-    z-index: 1000
-
+.jobs-show {
+    border-bottom: 1px solid lightgrey;
+    padding: 15px;
 }
