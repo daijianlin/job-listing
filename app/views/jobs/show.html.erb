@@ -2,17 +2,49 @@
   <h3>
     <%= @job.title %>
   </h3>
+  <p>Posted:
+    <%= @job.created_at.to_date %></p>
+  <div class="text-left">
+    <%= link_to("投交履历", new_job_resume_path(@job), class: "btn btn-xs btn-primary") %>
+  </div>
+  <br>
+
+  <div class="row jobs-show0"></div>
+  <br>
 
   <p>
+    工作描述：
+    <br>
     <%= simple_format(@job.description) %>
 
   </p>
-
-  <div class="text-center">
-    <%= link_to("投交履历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
-  </div>
-
+  <div class="row jobs-show0"></div>
   <br>
+  <p>
+    工作地点：ShenZhen, China
+    <br>
+
+  </p>
+  <div class="row jobs-show0"></div>
   <br>
+  <p>
+    工作类型：全职
+    <br>
+
+  </p>
+  <div class="row jobs-show0"></div>
+  <br>
+  <p>
+    工作经验：需要有5年以上的工作经验
+    <br>
+
+  </p>
+  <div class="row jobs-show0"></div>
+  <br>
+  <p>
+    所在行业：软件业
+    <br>
+
+  </p>
   <br>
 </div>
