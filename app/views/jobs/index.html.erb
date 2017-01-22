@@ -1,28 +1,27 @@
 <div class="job-index">
 
   <div class="dropdown clearfix pull-right" id="include-job">
-      <br>
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        排序
-          <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-          <li>
-            <%= link_to("薪资下限", jobs_path(:order => "by_lower_bound")) %>
-          </li>
-          <li>
-              <%= link_to("薪资上限", jobs_path(:order => "by_upper_bound")) %>
+    <br>
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      排序
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+      <li>
+        <%= link_to("薪资下限", jobs_path(:order => "by_lower_bound")) %>
+      </li>
+      <li>
+        <%= link_to("薪资上限", jobs_path(:order => "by_upper_bound")) %>
 
-          </li>
-          <li>
-            <%= link_to("发表时间", jobs_path ) %>
+      </li>
+      <li>
+        <%= link_to("发表时间", jobs_path ) %>
 
-          </li>
-      </ul>
+      </li>
+    </ul>
   </div>
 
-  <div class="row jobs-show0">
-  </div>
+  <div class="row jobs-show0"></div>
   <div class="job-table">
     <% @jobs.each do |job| %>
     <div class="row jobs-show">
@@ -30,22 +29,27 @@
       <div class="col-md-12 col-lg-9 col-lg-offset-1">
 
         <div class="pull-right">
-        发布时间：<%= job.created_at.to_date %>
+          发布时间：<%= job.created_at.to_date %>
         </div>
         <p ><%= link_to(job.title, job_path(job), class: 'job-name') %></p>
         <div class="row">
           <div class="col-md-9">
-            <p class="wage-range"><%= job.wage_lower_bound %> - <%= job.wage_upper_bound %> </p>
+            <p class="wage-range"><%= job.wage_lower_bound %>
+              -
+              <%= job.wage_upper_bound %>
+            </p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-9">
-            <p><%= job.description %> </p>
+            <p><%= job.description %>
+            </p>
           </div>
         </div>
         <div class="pull-right">
           <div class="pull-right col-md-12">
-            <p><%= link_to("快速应聘", job_path(job), :class => "btn btn-xs btn-primary")%> </p>
+            <p><%= link_to("快速应聘", job_path(job), :class => "btn btn-xs btn-primary")%>
+            </p>
           </div>
         </div>
 
@@ -53,9 +57,6 @@
     </div>
     <% end %>
   </div>
-
-
-
 
   <div class="text-center">
     <%= will_paginate @jobs %>

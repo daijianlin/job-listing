@@ -1,13 +1,13 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   before_action :require_is_admin
-  layout "admin"
+  layout 'admin'
   def show
     @job = Job.find(params[:id])
   end
 
   def index
-    @jobs = Job.all.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.all.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -44,6 +44,7 @@ class Admin::JobsController < ApplicationController
 
     redirect_to admin_jobs_path
   end
+
   def publish
     @job = Job.find(params[:id])
     @job.publish!
@@ -59,10 +60,9 @@ class Admin::JobsController < ApplicationController
     redirect_to :back
   end
 
-
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email,:is_hidden)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
   end
 end
