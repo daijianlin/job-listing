@@ -1,25 +1,26 @@
 <div>
-<div class="search-result">
+  <br>
+  <h2 class="search-info-title"> 有关"<%= @query_string %>"的工作信息 </h2>
+  <div class="search-result">
 
-<div class="row jobs-show0"></div>
-<div class="job-table">
-  <% @jobs.each do |job| %>
-  <div class="row jobs-show">
+    <div class="row jobs-show0"></div>
+    <div class="job-table">
+      <% @jobs.each do |job| %>
+      <div class="row jobs-show">
 
-    <div class="col-md-12 col-lg-9 col-lg-offset-1">
+        <div class="col-md-12 col-lg-9 col-lg-offset-1">
 
-      <div class="pull-right">
-        发布时间：<%= job.created_at.to_date %>
+          <div class="pull-right">
+            发布时间：<%= job.created_at.to_date %>
+          </div>
+          <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
+
+        </div>
       </div>
-      <p ><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
-
-
+      <% end %>
     </div>
   </div>
-  <% end %>
-</div>
-</div>
-<div class="text-center">
-  <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
-</div>
+  <div class="text-center">
+    <%= will_paginate(@jobs, renderer: BootstrapPagination::Rails) %>
+  </div>
 </div>

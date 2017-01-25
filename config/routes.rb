@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   resources :welcome
+  get 'about', to: 'jobs#about'
 
   root 'welcome#index'
 end

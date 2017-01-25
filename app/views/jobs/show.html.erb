@@ -1,8 +1,8 @@
 <div class="leftright30">
-  <h3>
+  <h3 class="job-name-show">
     <%= @job.title %>
   </h3>
-  <p>Posted:
+  <p class="job-date">Posted:
     <%= @job.created_at.to_date %></p>
   <div class="text-left">
     <%= link_to("投交履历", new_job_resume_path(@job), class: "btn btn-xs btn-primary") %>

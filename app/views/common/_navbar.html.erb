@@ -10,13 +10,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li >
-          <a href="/jobs">添加简历
+          <a href="/jobs">浏览职位
           </a>
         </li>
         <li>
-          <a href="/jobs">浏览职位</a>
+          <%= link_to("关于FutureCareer", about_path)%>
         </li>
-        <li class="dropdown">
+        <!-- <li>
+          <a href="/jobs">联系FutureCareer</a>
+        </li> -->
+        <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多
             <span class="caret"></span>
           </a>
@@ -31,7 +34,7 @@
             <li>
               <a href="#">帮助中心</a>
             </li>
-          </ul>
+          </ul> -->
         </li>
       </ul>
 
@@ -53,7 +56,7 @@
 
         </div>
       </form> -->
-      <div>
+      <div class="nav navbar-nav navbar-left">
       <%= form_tag search_jobs_path , :method => :get, :class => "jobs-search-form" do %>
       <div class="input-group" id="search-id" >
         <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入职位信息">
