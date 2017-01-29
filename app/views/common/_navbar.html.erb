@@ -57,7 +57,7 @@
         </div>
       </form> -->
       <div class="nav navbar-nav navbar-left">
-      <%= form_tag search_jobs_path , :method => :get, :class => "jobs-search-form" do %>
+      <%= form_tag search_jobs_path , :method => :get do %>
       <div class="input-group" id="search-id" >
         <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入职位信息">
         <div class="input-group-btn">
